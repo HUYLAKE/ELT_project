@@ -1,17 +1,19 @@
 # ELT_mock projet
 ![images](ELT_datapipeline.png)
 
-Đây là 1 mock project về một data pipeline cùng công cụ dbt và CSDL MySQL
+# 🛠️ Data Pipeline Project — dbt + MySQL
 
-Các bước của dự án
+Dự án này mô phỏng một quy trình **Data Pipeline** sử dụng **MySQL** làm hệ quản trị cơ sở dữ liệu và **dbt** làm công cụ chuyển đổi dữ liệu (T → trong ELT).  
+Mục tiêu là tái hiện kiến trúc hiện đại của các doanh nghiệp khi xây dựng data warehouse nhỏ, tách biệt dữ liệu thô và dữ liệu đã được xử lý.
 
-- trong MySQL sẽ có 2 database là raw và analytics
-+ database raw dùng để chứa data từ file csv nguyên dạng không chỉnh sửa
-+ database analytics dùng để nhận dữ liệu đã làm sạch từ database raw
-- sử dụng dbt để biến đổi/làm sạch dữ liệu
-+ trong models sẽ có 2 folder con gồm staging và marts
-+ folder staging chứ các model từ các bảng chứa dữ liệu thô từ database raw cùng một chút biến đổi
-+ folder marts chứ model đã biến đổi dữ và tính toán dữ liệu lấy từ các model staging bằng phương pháp jinja ref của dbt
-  
+---
 
+## 📐 Kiến Trúc Tổng Quan
+
+Pipeline bao gồm 2 tầng dữ liệu chính trong MySQL:
+
+- **raw** — lưu trữ dữ liệu gốc lấy trực tiếp từ file CSV  
+- **analytics** — lưu trữ dữ liệu đã được làm sạch / biến đổi từ dbt
+
+Toàn bộ thao tác transform được thực hiện bằng **dbt**, với cấu trúc chuẩn gồm:
 
