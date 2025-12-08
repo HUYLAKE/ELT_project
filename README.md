@@ -8,6 +8,10 @@ Mục tiêu là tái hiện kiến trúc hiện đại của các doanh nghiệp
 
 ---
 
+## Scenario
+Chúng ta sẽ vào vai 1 Analytic Engineer được nhận để tạo 1 bảng dimesion gộp từ file `order.csv` và customer.csv` 
+Task chúng ta được giao là tạo 1 data warehouse trong chứa bảng được tính từ 2 file csv trên để đội Data Analyst có thể tìm và trích insight từ bảng đó
+
 ## 📐 Kiến Trúc Tổng Quan
 
 Pipeline bao gồm 2 tầng dữ liệu chính trong MySQL:
